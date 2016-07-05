@@ -1,0 +1,178 @@
+/*Flexboxes*/
+
+body{
+   margin: 0px;
+   padding: 0px;
+   font-family: 'Hind', sans-serif;
+   color: white;
+}
+
+p{
+  margin: 10px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+
+ul {
+  margin: 0px;
+  text-align: center;
+  list-style-type: none;
+  /*padding: 0px;*/
+}
+
+footer {
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+span {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.cover {
+  background-image: url(https://images3.alphacoders.com/201/201447.jpg);
+  background-size: cover;
+}
+
+.gradient {
+  background: black;
+  background-size: cover;
+}
+
+.border {
+  border-color: white;
+  border-radius: 3px;
+  border-style: solid;
+}
+
+.linkheading {
+  color: rgba(150, 80, 180, .8);
+  font-style: italic;
+  font-weight: bold;
+}
+
+/*Flexboxes*/
+
+/*Upper nav bar flexbox*/
+.navcontainer {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  /*border: 10px solid green;*/
+  align-items: flex-end;
+  align-content: flex-end;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  margin-bottom: 80px;
+}
+
+.navitem {
+  justify-content: flex-start;
+  margin: 10px;
+}
+
+.cornericon {
+  margin-right: auto;
+  align-self: flex-start;
+  font-size: 30px;
+}
+
+/*body flexbox*/
+.bodycontainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  /*border: 10px solid green;*/
+  margin: 80px;
+}
+
+.bodyitem {
+  justify-content: center;
+  text-align: center;
+}
+
+/*lower body link flexbox*/
+.flexcontainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  border-top-color: rgba(104, 34, 139, .5);
+  border-top-width: thin;
+  border-top-style: solid;
+}
+
+.flexitem {
+  justify-content: center;
+  text-align: center;
+}
+
+/*footer flexbox*/
+.flexfooter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.footeritem {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px;
+}
+
+.bottomcornericon {
+  margin-right: auto;
+  align-self: flex-end;
+}
+
+.box {
+  background-color: rgba(0, 0, 0, 0.75);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 2.5px black;
+}
+
+.emailinput {
+  font-size: 20px;
+  border-radius: 10px;
+  padding-top: 10px;
+  border: 0px;
+}
+
+.createbutton {
+  font-size: 20px;
+  border-radius: 10px;
+  padding-top: 10px;
+  background-color: rgb(104, 34, 139);
+  color: white;
+  border: 0px;
+}
+
+/*hover effects*/
+/*code adapted from http://stackoverflow.com/questions/10331615/changing-image-for-button-on-hover*/
+input[type=submit]:hover {
+  background-color: black;
+}
