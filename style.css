@@ -17,7 +17,6 @@ ul {
   margin: 0px;
   text-align: center;
   list-style-type: none;
-  /*padding: 0px;*/
 }
 
 footer {
@@ -65,6 +64,15 @@ span {
   font-weight: bold;
 }
 
+/* for the plus signs */
+.readmore {
+  display: none;
+}
+
+.links {
+  font-size: 15px;
+}
+
 /*Flexboxes*/
 
 /*Upper nav bar flexbox*/
@@ -84,6 +92,19 @@ span {
 .navitem {
   justify-content: flex-start;
   margin: 10px;
+}
+
+.signin {
+  justify-content: flex-start;
+  margin: 10px;
+}
+
+.signin:hover {
+  background: purple;
+}
+
+.signin:hover a {
+  text-decoration: none;
 }
 
 .cornericon {
@@ -106,6 +127,35 @@ span {
 .bodyitem {
   justify-content: center;
   text-align: center;
+}
+
+.box {
+  background-color: rgba(0, 0, 0, 0.75);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 2.5px black;
+}
+
+.emailinput {
+  font-size: 20px;
+  border-radius: 10px;
+  padding-top: 10px;
+  border: 0px;
+}
+
+.createbutton {
+  font-size: 20px;
+  border-radius: 10px;
+  padding-top: 10px;
+  background-color: rgb(104, 34, 139);
+  color: white;
+  border: 0px;
+}
+
+/*code adapted from http://stackoverflow.com/questions/10331615/changing-image-for-button-on-hover*/
+input[type=submit]:hover {
+  background-color: black;
 }
 
 /*lower body link flexbox*/
@@ -147,32 +197,111 @@ span {
   align-self: flex-end;
 }
 
-.box {
-  background-color: rgba(0, 0, 0, 0.75);
-  margin: 20px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 5px 5px 2.5px black;
-}
 
-.emailinput {
-  font-size: 20px;
-  border-radius: 10px;
-  padding-top: 10px;
-  border: 0px;
-}
 
-.createbutton {
-  font-size: 20px;
-  border-radius: 10px;
-  padding-top: 10px;
-  background-color: rgb(104, 34, 139);
-  color: white;
-  border: 0px;
-}
+/*mobile functionality*/
+@media only screen and (max-width: 640px) {
 
-/*hover effects*/
-/*code adapted from http://stackoverflow.com/questions/10331615/changing-image-for-button-on-hover*/
-input[type=submit]:hover {
-  background-color: black;
+  h1 {
+    padding: 0px;
+  }
+
+  p {
+    padding: 0px;
+  }
+
+  /*nav bar*/
+    .navitem {
+      display: none;
+    }
+
+    /*main content and sign-up component of page*/
+    .bodycontainer {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content:space-between;
+      margin-bottom: 0px;
+      margin-right: 0px;
+      margin-left: 0px;
+      padding: 0px;
+      overflow: auto;
+    }
+
+    .bodyitem {
+      justify-content: space-between;
+      text-align: center;
+    }
+
+    /*sign up component*/
+    .box {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 90vw;
+      height: 35vh;
+      border-radius: 25px;
+      overflow: auto;
+    }
+
+    .emailinput {
+      margin-top: 10vh;
+      margin-bottom: 3vh;
+      font-size: 20px;
+      border-radius: 10px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      width: 90vw;
+      align-self: center;
+    }
+
+    .createbutton {
+      font-size: 20px;
+      border-radius: 10px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      width: 90vw;
+      background-color: rgb(104, 34, 139);
+      color: white;
+    }
+
+    /*links at the bottom*/
+    .flexcontainer {
+      flex-direction: column;
+      flex-wrap: wrap;
+      margin: 0px;
+      padding: 0px;
+      width: 100%;
+      border-style: none;
+      overflow:auto;
+      background-color: rgba(150, 80, 180, .5);
+    }
+
+
+    .flexitem {
+      width: 100vw;
+      border-width: thin;
+      border-color: rgba(0, 0, 0, .25);
+      border-style: solid;
+    }
+
+    .linkheading {
+      color: white;
+      font-style: normal;
+      display: flex;
+      display: inline;
+      flex-direction: row;
+    }
+
+    .links {
+      display: none;
+    }
+
+    .readmore {
+      display: inline;
+      align-self: stretch;
+    }
+
+  }
 }
